@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
-import Login from '.'
+import Login from './components/Login'
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -13,9 +13,9 @@ function App() {
 
   useEffect(() => {
     fetch('/me')
-    .then(r => {
-      if(r.ok) {
-        r.json()
+    .then(response => {
+      if(response.ok) {
+        response.json()
         .then( u => {
           setLoggedIn(true)
           setUser(u)
@@ -23,7 +23,6 @@ function App() {
       }
     })
   }, [])
-
 
   const LoginUser= (u) => {
     setLoggedIn(true)

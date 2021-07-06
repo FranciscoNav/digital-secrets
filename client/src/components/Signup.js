@@ -18,7 +18,7 @@ const Signup = ({loginUser}) => {
               passwordConfirmation: passwordConfirmation
           })
         })
-        .then (r => r.json())
+        .then (resp => resp.json())
         .then (user => loginUser(user))
     }
 
