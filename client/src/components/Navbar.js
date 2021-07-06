@@ -20,7 +20,7 @@ const Navbar = (props) => {
                 </Link>
                 <br/>
                 <Link to="/login">
-                    <button>login</button>
+                    <button>Login</button>
                 </Link>
             </div>
         )
