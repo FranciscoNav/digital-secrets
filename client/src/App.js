@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
-import Login from './components/Login'
+import Login from './components/Login';
+import PostList from './components/PostList';
+import Post from './components/Post';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -12,13 +14,14 @@ function App() {
   const history = useHistory()
 
   useEffect(() => {
+    // auto-login
     fetch('/me')
     .then(response => {
       if(response.ok) {
         response.json()
-        .then( u => {
+        .then( user => {
           setLoggedIn(true)
-          setUser(u)
+          setUser(user)
         })
       }
     })
@@ -49,6 +52,8 @@ function App() {
         <Route exact path="/" component={Home}/>
         <Route exact path="/signup" render={routerProps => <Signup {...routerProps} loginUser={LoginUser}/>}/>
         <Route exact path="/login" render={routerProps => <Login {...routerProps} loginUser={LoginUser}/>}/>
+        <Route exact path="/posts" render={routerProps => <PostList {...routerProps} user={user} loggedIn={loggedIn}/>}/>
+        <Route exact path="/posts/:id"  component={Post}/>
       </Switch>
     </div>
   );

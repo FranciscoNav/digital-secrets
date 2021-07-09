@@ -7,8 +7,11 @@ const Navbar = (props) => {
         return (
             <div>
                 <h1>Hello {props.user.username}</h1>
-                <br/>
                 <button onClick={props.logoutUser}>Logout</button>
+                <br/>
+                <Link to="/posts">
+                    <button>View all Secret Posts</button>
+                </Link>
             </div>
         )
     } else{

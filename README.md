@@ -194,3 +194,9 @@ For additional support, check out these guides on Heroku:
 
 - [Deploying a Rails 6 App to Heroku][heroku rails deploying guide]
 - [Rails Troubleshooting on Heroku][troubleshooting guide on heroku]
+
+--------------------------------to run backend------------------------
+Run the following commands in the terminal to run the backend
+1. Run: sudo service postgresql start
+2. Enter paswword(if nedded):
+3. Run: rails s

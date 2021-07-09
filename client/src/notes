@@ -1,0 +1,18 @@
+First used in PostList
+
+// useEffect(() => {
+//     fetch("/posts")
+//       .then((r) => r.json())
+//       .then(data => {
+//           console.log("fetch all posts", data)
+//           if (data){
+//               if(data.error){
+//                 setError(data.error)
+//               }else{
+//                 setPosts(data)
+//               }
+//           }else{
+//             setError("Not Authorized")
+//           }
+//       })
+// }, []);
