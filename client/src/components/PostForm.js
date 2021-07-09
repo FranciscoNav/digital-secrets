@@ -16,13 +16,23 @@ const PostForm = ({addPost}) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="post-form" onSubmit={handleSubmit}>
+                <h3>Complete the form below to add a new secrect post!</h3>
                 <label>Title</label>
+                <br/>
                 <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)}></input>
+                <br/>
+                <br/>
                 <label>Content</label>
-                <input type="text" id="content" value={content} onChange={(e) => setContent(e.target.value)}></input>
+                <br/>
+                <textarea type="text" id="content" rows="4" cols="50" value={content} onChange={(e) => setContent(e.target.value)}></textarea>
+                <br/>
+                <br/>
                 <label>Date</label>
+                <br/>
                 <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
+                <br/>
+                <br/>
                 <input className="submit-button" type="submit"/>
             </form>
         </div>

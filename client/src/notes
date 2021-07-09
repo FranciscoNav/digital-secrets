@@ -1,4 +1,4 @@
-First used in PostList
+First useEffect in PostList component
 
 // useEffect(() => {
 //     fetch("/posts")
@@ -16,3 +16,6 @@ First used in PostList
 //           }
 //       })
 // }, []);
+
+
+first useEffect in App component

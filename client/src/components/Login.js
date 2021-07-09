@@ -17,17 +17,22 @@ const Login = ({loginUser}) => {
           })
         })
         .then (resp => resp.json())
-        .then (user => loginUser(user))
+        .then (user =>  loginUser(user))
     }
     
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="sign-up" onSubmit={handleSubmit}>
                 <label> Username:</label>
+                <br/>
                 <input type="text" id="username" value={username} onChange={(e) => setUserName(e.target.value)}></input>
+                <br/>
+                <br/>
                 <label> Password:</label>
-                <input type="text" id="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-                <input type="submit"/>
+                <br/>
+                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                <br/>
+                <input className="submit-button" type="submit"/>
             </form>
         </div>
     )

@@ -13,11 +13,11 @@ body{
 .sign-up {
   background-color: rgb(221, 215, 215);
   text-align: center;
-  border: rgb(102, 98, 98) solid 1px;
+  border: rgb(73, 71, 71) solid 1px;
   padding: 1rem;
   height: auto;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #844be0
+  box-shadow: 3px 4px #6b2ccf
 }
 
 .submit-button {
@@ -63,5 +63,16 @@ body{
   padding: 1rem;
   height: auto;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #844be0
+  box-shadow: 3px 4px #6b2ccf
 }
+
+.post-form {
+  background-color: rgb(226, 186, 238);
+  text-align: center;
+  border: rgb(102, 98, 98) solid 1px;
+  padding: 1rem;
+  height: auto;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #6b2ccf
+}
+/* rgb(216, 166, 231); */

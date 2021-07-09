@@ -12,6 +12,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [user, setUser] = useState({})
   const history = useHistory()
+  const [loginError, setLoginError] = useState("")
 
   useEffect(() => {
     // auto-login
@@ -23,6 +24,8 @@ function App() {
           setLoggedIn(true)
           setUser(user)
         })
+      }else{
+        setLoginError(response.statusText)
       }
     })
   }, [])
@@ -41,13 +44,13 @@ function App() {
       console.log('logged out')
       setLoggedIn(false)
       setUser({})
-    })
+    }) 
     history.push('/')
   }
 
   return (
     <div className="App">
-      <Navbar user={user} loggedIn={loggedIn} logoutUser={logoutUser}/>
+      <Navbar user={user} loggedIn={loggedIn} logoutUser={logoutUser} loginError={loginError}/>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/signup" render={routerProps => <Signup {...routerProps} loginUser={LoginUser}/>}/>

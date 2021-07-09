@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
 
   resources :posts
-
-  # , only: [:index, :create, :show, :destroy]
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

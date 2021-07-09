@@ -26,11 +26,19 @@ const Signup = ({loginUser}) => {
         <div>
             <form className="sign-up" onSubmit={handleSubmit}>
                 <label> Username:</label>
+                <br/>
                 <input type="text" id="username" value={username} onChange={(e) => setUserName(e.target.value)}></input>
+                <br/>
+                <br/>
                 <label> Password:</label>
-                <input type="text" id="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                <br/>
+                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                <br/>
+                <br/>
                 <label> Confirm Password:</label>
-                <input type="text" id="password_confirm" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
+                <br/>
+                <input type="password" id="password_confirm" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
+                <br/>
                 <input className="submit-button" type="submit"/>
             </form>
         </div>
