@@ -23,7 +23,7 @@ const PostForm = ({addPost}) => {
                 <input type="text" id="content" value={content} onChange={(e) => setContent(e.target.value)}></input>
                 <label>Date</label>
                 <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
-                <input type="submit"/>
+                <input className="submit-button" type="submit"/>
             </form>
         </div>
     )

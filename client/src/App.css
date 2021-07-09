@@ -5,3 +5,63 @@
 .App-link {
   color: #61dafb;
 }
+
+body{
+  background: linear-gradient(0.25turn, #5f5f5f, #cccccc, #696969);
+}
+
+.sign-up {
+  background-color: rgb(221, 215, 215);
+  text-align: center;
+  border: rgb(102, 98, 98) solid 1px;
+  padding: 1rem;
+  height: auto;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #844be0
+}
+
+.submit-button {
+  position: relative;
+  background-color: #844be0;
+  border-radius: 5px;
+  height: 2rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+  margin: 3px;
+}
+
+.submit-button:hover {
+  background-color: whitesmoke;
+  border: #000000 solid 1px;
+  color: #844be0;
+}
+
+.logout-button {
+  position: relative;
+  background-color: #c22a37;
+  border-radius: 5px;
+  height: 2rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+  margin: 3px;
+}
+
+.logout-button:hover {
+  background-color: whitesmoke;
+  border: #000000 solid 1px;
+  color: #c22a37;
+}
+
+.card {
+  background-color: rgb(221, 215, 215);
+  text-align: center;
+  border: rgb(102, 98, 98) solid 1px;
+  padding: 1rem;
+  height: auto;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #844be0
+}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PostForm from './PostForm';
 import PostLink from './PostLink';
-// import Post from './PostForm';
 
 const PostList = () => {
     const [posts, setPosts] = useState([])
@@ -35,21 +34,20 @@ const PostList = () => {
             setPostFormFlag(false)
         })
     }
- 
-    // const postsList = posts.map( p => <li key={p.id}>{p.title} - {p.date}</li>)
+
     const postsList = posts.map( p => <PostLink key={p.id} post={p} />)
 
     return (
         <div>
             {posts.length > 0 ?
-                <div>
+                <div className="card">
+                    <h3>Here are all your secret posts. Just click to view!</h3>
                     {postsList}
                     {postFormFlag ? 
                         <PostForm addPost ={addPost}/>
                         :
-                        <button onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
+                        <button className="submit-button" onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
                     }
-                    <hr/>
                 </div>
                 :
                 <div>
@@ -58,7 +56,7 @@ const PostList = () => {
                     {postFormFlag ? 
                         <PostForm addPost ={addPost}/>
                         :
-                        <button onClick={() => setPostFormFlag(true) }>Add New Secret Post</button>
+                        <button className="submit-button" onClick={() => setPostFormFlag(true) }>Add New Secret Post</button>
                     }
                     <hr/>
                 </div>

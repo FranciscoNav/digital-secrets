@@ -52,8 +52,8 @@ const Post = (props) =>{
             <h2>{post.title}</h2>
             <p>{post.content}</p>
             <p>Posted on - {post.date}</p>
-            {editFormFlag ? <EditForm editPost={editPost} post={post} /> : <button onClick={() => setEditFormFlag(true)}>Edit Post</button>} 
-            <button onClick={deletePost}> Delete Post</button>
+            {editFormFlag ? <EditForm editPost={editPost} post={post} /> : <button className="submit-button" onClick={() => setEditFormFlag(true)}>Edit Post</button>} 
+            <button className="submit-button" onClick={deletePost}> Delete Post</button>
         </div>
     )
 }
