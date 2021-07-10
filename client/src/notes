@@ -17,5 +17,11 @@ First useEffect in PostList component
 //       })
 // }, []);
 
+fisrt Login on App component 
 
-first useEffect in App component
+  const LoginUser= (u) => {
+    debugger
+    setLoggedIn(true)
+    setUser(u)
+    history.push('/')
+  }

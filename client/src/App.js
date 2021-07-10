@@ -31,9 +31,14 @@ function App() {
   }, [])
 
   const LoginUser= (u) => {
-    setLoggedIn(true)
-    setUser(u)
-    history.push('/')
+    if(u.error == "Invalid username or password"){
+      setLoggedIn(false)
+      console.log(loginError)
+    }else{
+      setLoggedIn(true)
+      setUser(u)
+      history.push('/')
+    }
   }
 
   const logoutUser = () => {
@@ -54,7 +59,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/signup" render={routerProps => <Signup {...routerProps} loginUser={LoginUser}/>}/>
-        <Route exact path="/login" render={routerProps => <Login {...routerProps} loginUser={LoginUser}/>}/>
+        <Route exact path="/login" render={routerProps => <Login {...routerProps} loginUser={LoginUser} />}/>
         <Route exact path="/posts" render={routerProps => <PostList {...routerProps} user={user} loggedIn={loggedIn}/>}/>
         <Route exact path="/posts/:id"  component={Post}/>
       </Switch>
