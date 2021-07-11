@@ -31,9 +31,14 @@ function App() {
   }, [])
 
   const LoginUser= (u) => {
+      // debugger
     if(u.error == "Invalid username or password"){
+      // debugger
       setLoggedIn(false)
-      console.log(loginError)
+      alert(loginError);
+    }else if (u.error == "Internal Server Error"){
+      setLoggedIn(false)
+      alert("Please make sure the signup form is correct. It should include a username, and matching passwords");
     }else{
       setLoggedIn(true)
       setUser(u)
