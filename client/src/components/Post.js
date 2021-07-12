@@ -52,8 +52,8 @@ const Post = (props) =>{
             <div>
                 {post.id > 0 ?
                     <div>
-                        <h2>{post.title}</h2>
-                        <p>{post.content}</p>
+                        <h2 className='home'>{post.title}</h2>
+                        <p className='content'>{post.content}</p>
                         <p>Posted on - {post.date}</p>
                         {editFormFlag ? <EditForm editPost={editPost} post={post} /> : <button className="submit-button" onClick={() => setEditFormFlag(true)}>Edit Post</button>} 
                         <button className="submit-button" onClick={deletePost}> Delete Post</button>

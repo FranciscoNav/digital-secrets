@@ -46,7 +46,7 @@ const PostList = () => {
             <div>
                 {posts.length > 0 ?
                     <div className="card">
-                        <h3>Here are all your secret posts. Just click to view!</h3>
+                        <h3 className='form-title'>Here are all your secret posts. Just click to view!</h3>
                         {postsList}
                         {postFormFlag ? 
                             <PostForm addPost ={addPost}/>

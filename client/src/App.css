@@ -75,4 +75,18 @@ body{
   margin: 1rem 2rem;
   box-shadow: 3px 4px #6b2ccf
 }
-/* rgb(216, 166, 231); */
+
+.home {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  color: #6b2ccf;
+}
+
+.content{
+  font-family: "Permanent Marker", cursive;
+  /* font-size: 14px; */
+}
+
+.form-title{
+  font-family: "Permanent Marker", cursive;
+}

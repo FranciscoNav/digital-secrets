@@ -17,7 +17,7 @@ const PostForm = ({addPost}) => {
     return (
         <div>
             <form className="post-form" onSubmit={handleSubmit}>
-                <h3>Complete the form below to add a new secrect post!</h3>
+                <h3 className='form-title'>Complete the form below to add a new secrect post!</h3>
                 <label>Title</label>
                 <br/>
                 <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)}></input>
