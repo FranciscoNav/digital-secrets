@@ -47,15 +47,33 @@ const Post = (props) =>{
         setEditFormFlag(false)
     }
 
-    return (
-        <div>
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
-            <p>Posted on - {post.date}</p>
-            {editFormFlag ? <EditForm editPost={editPost} post={post} /> : <button className="submit-button" onClick={() => setEditFormFlag(true)}>Edit Post</button>} 
-            <button className="submit-button" onClick={deletePost}> Delete Post</button>
-        </div>
-    )
+    if (error ===''){
+        return (
+            <div>
+                {post.id > 0 ?
+                    <div>
+                        <h2>{post.title}</h2>
+                        <p>{post.content}</p>
+                        <p>Posted on - {post.date}</p>
+                        {editFormFlag ? <EditForm editPost={editPost} post={post} /> : <button className="submit-button" onClick={() => setEditFormFlag(true)}>Edit Post</button>} 
+                        <button className="submit-button" onClick={deletePost}> Delete Post</button>
+                    </div>
+                    :
+                    <div>
+                        <h2>Post Deleted ! - Click the view all button above to see all your remaining secret posts.</h2>
+                    </div>
+                }
+                
+            </div>
+        )
+    }else{
+        return(
+            <div>
+                <h3>Not authorized - Please Sign up or Login</h3>
+            </div>
+            
+        )
+    }
 }
 
 export default Post

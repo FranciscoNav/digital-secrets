@@ -16,27 +16,3 @@ First useEffect in PostList component
 //           }
 //       })
 // }, []);
-
-fisrt Login on App component 
-
-  const LoginUser= (u) => {
-    debugger
-    setLoggedIn(true)
-    setUser(u)
-    history.push('/')
-  }
-
-  second Login on App component
-
-  const LoginUser= (u) => {
-      debugger
-    if(u.error == "Invalid username or password"){
-      // debugger
-      setLoggedIn(false)
-      alert(loginError);
-    }else{
-      setLoggedIn(true)
-      setUser(u)
-      history.push('/')
-    }
-  }
