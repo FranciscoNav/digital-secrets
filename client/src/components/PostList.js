@@ -11,7 +11,6 @@ const PostList = () => {
         fetch("/posts")
           .then((r) => r.json())
           .then(data => {
-            console.log("fetch all posts", data)
             if(data.error){
                 setError(data.error)
             }else{

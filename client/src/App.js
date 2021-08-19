@@ -15,7 +15,6 @@ function App() {
   const [loginError, setLoginError] = useState("")
 
   useEffect(() => {
-    // auto-login
     fetch('/me')
     .then(response => {
       if(response.ok) {
@@ -49,8 +48,7 @@ function App() {
       method: 'DELETE'
     })
     .then(() => {
-      console.log('logged out')
-      setLoggedIn(false)
+      setLoggedIn(false) 
       setUser({})
     }) 
     history.push('/')

@@ -1,7 +1,7 @@
-### Welcome to Secret Posts!
+### Welcome to Digital Secrets!
 
 ## Description
-Hello and welcome to Secret Posts! Our mission is to allow our users to upload digital posts that can only be viewed by the user themselves. Our website is perfect for anyone trying to digitalize their secret recipes, diary, or notes. Just click the signup button to begin!
+Hello and welcome to Digital Secrets! Our mission is to allow our users to upload digital posts that can only be viewed by the user themselves. Our website is perfect for anyone trying to digitalize their secret recipes, diary, or notes. Just click the signup button to begin!
 
 ## Requirements
 - Ruby 2.7.3

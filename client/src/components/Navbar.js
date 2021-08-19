@@ -3,7 +3,6 @@ import { NavLink, Link } from 'react-router-dom'
 
 const Navbar = (props) => {
     
-    // props.user.length > 0 
     if (props.loggedIn){
         return (
             <div>

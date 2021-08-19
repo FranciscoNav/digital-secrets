@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
     def index
         user = User.find_by(id: session[:user_id])
+        # byebug
         posts = user.posts
         render json: posts
     end

@@ -45,5 +45,4 @@ const Signup = ({loginUser}) => {
     )
 }
 
-
 export default Signup;
