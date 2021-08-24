@@ -48,7 +48,7 @@ const PostList = () => {
                         <h3 className='form-title'>Here are all your secret posts. Just click to view!</h3>
                         {postsList}
                         {postFormFlag ? 
-                            <PostForm addPost ={addPost}/>
+                            <PostForm addPost={addPost} setPostFormFlag={setPostFormFlag}/>
                             :
                             <button className="submit-button" onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
                         }
@@ -58,9 +58,9 @@ const PostList = () => {
                         <h3>No Secret Posts Found</h3>
                         <h3>Click the button below to start</h3>
                         {postFormFlag ? 
-                            <PostForm addPost ={addPost}/>
+                            <PostForm addPost={addPost} setPostFormFlag={setPostFormFlag}/>
                             :
-                            <button className="submit-button" onClick={() => setPostFormFlag(true) }>Add New Secret Post</button>
+                            <button className="submit-button" onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
                         }
                         <hr/>
                     </div>

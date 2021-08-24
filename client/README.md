@@ -24,7 +24,7 @@ rails s
 ```
 
 Additional setup notes:
-- You will have to have a postgresql password in order to run the back-end
+- You will need a postgresql password in order to run the back-end
 - `rails s`: run the backend on [http://localhost:3000](http://localhost:3000)
 - `npm start --prefix client`: run the frontend on [http://localhost:4000](http://localhost:4000)
 

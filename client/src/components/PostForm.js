@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const PostForm = ({addPost}) => {
+const PostForm = ({addPost, setPostFormFlag}) => {
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
     const [date, setDate] = useState("")
@@ -34,6 +34,7 @@ const PostForm = ({addPost}) => {
                 <br/>
                 <br/>
                 <input className="submit-button" type="submit"/>
+                <button className="submit-button" onClick={() => setPostFormFlag(false)}>Back</button>
             </form>
         </div>
     )
