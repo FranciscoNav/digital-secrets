@@ -50,7 +50,7 @@ const PostList = () => {
                         {postFormFlag ? 
                             <PostForm addPost={addPost} setPostFormFlag={setPostFormFlag}/>
                             :
-                            <button className="submit-button" onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
+                            <button className="button" onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
                         }
                     </div>
                     :
@@ -60,7 +60,7 @@ const PostList = () => {
                         {postFormFlag ? 
                             <PostForm addPost={addPost} setPostFormFlag={setPostFormFlag}/>
                             :
-                            <button className="submit-button" onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
+                            <button className="button" onClick={() => setPostFormFlag(true)}>Add New Secret Post</button>
                         }
                         <hr/>
                     </div>

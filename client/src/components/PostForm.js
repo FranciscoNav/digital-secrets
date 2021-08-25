@@ -33,8 +33,8 @@ const PostForm = ({addPost, setPostFormFlag}) => {
                 <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
                 <br/>
                 <br/>
-                <input className="submit-button" type="submit"/>
-                <button className="submit-button" onClick={() => setPostFormFlag(false)}>Back</button>
+                <input className="button" type="submit"/>
+                <button className="button" onClick={() => setPostFormFlag(false)}>Back</button>
             </form>
         </div>
     )

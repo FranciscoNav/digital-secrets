@@ -20,7 +20,7 @@ body{
   box-shadow: 3px 4px #6b2ccf
 }
 
-.submit-button {
+.button {
   position: relative;
   background-color: #844be0;
   border-radius: 5px;
@@ -32,7 +32,7 @@ body{
   margin: 3px;
 }
 
-.submit-button:hover {
+.button:hover {
   background-color: whitesmoke;
   border: #000000 solid 1px;
   color: #844be0;

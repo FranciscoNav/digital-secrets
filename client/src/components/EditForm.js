@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const EditForm = ({editPost, post}) => {
+const EditForm = ({editPost, post, setEditFormFlag}) => {
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
     const [date, setDate] = useState("")
@@ -38,7 +38,8 @@ const EditForm = ({editPost, post}) => {
                 <br/>
                 <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
                 <br/>
-                <input className="submit-button" type="submit"/>
+                <input className="button" type="submit"/>
+                <button className="button" onClick={() => setEditFormFlag(false)}>Back</button>
             </form>
         </div>
     )

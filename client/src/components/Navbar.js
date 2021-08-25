@@ -10,7 +10,7 @@ const Navbar = (props) => {
                 <button className="logout-button" onClick={props.logoutUser}>Logout</button>
                 <br/>
                 <Link to="/posts">
-                    <button className="submit-button">View all Secret Posts</button>
+                    <button className="button">View all Secret Posts</button>
                 </Link>
                 <hr/>
             </div>
@@ -20,11 +20,11 @@ const Navbar = (props) => {
             <div>
                 <br/>
                 <Link to="/signup">
-                    <button className="submit-button">Signup</button>
+                    <button className="button">Signup</button>
                 </Link>
                 <br/>
                 <Link to="/login">
-                    <button className="submit-button">Login</button>
+                    <button className="button">Login</button>
                 </Link>
             </div>
         )

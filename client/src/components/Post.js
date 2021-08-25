@@ -4,7 +4,7 @@ import EditForm from './EditForm';
 const Post = (props) =>{
     const [post, setPost] = useState([])
     const [error, setError] = useState("")
-    const [editFormFlag, setEditFormFlag,] = useState(false)
+    const [editFormFlag, setEditFormFlag] = useState(false)
 
     useEffect(() => {
         fetch(`/posts/${props.match.params.id}`)
@@ -54,15 +54,14 @@ const Post = (props) =>{
                         <h2 className='home'>{post.title}</h2>
                         <p className='content'>{post.content}</p>
                         <p>Posted on - {post.date}</p>
-                        {editFormFlag ? <EditForm editPost={editPost} post={post} /> : <button className="submit-button" onClick={() => setEditFormFlag(true)}>Edit Post</button>} 
-                        <button className="submit-button" onClick={deletePost}> Delete Post</button>
+                        {editFormFlag ? <EditForm editPost={editPost} post={post} setEditFormFlag={setEditFormFlag}/> : <button className="button" onClick={() => setEditFormFlag(true)}>Edit Post</button>} 
+                        <button className="button" onClick={deletePost}> Delete Post</button>
                     </div>
                     :
                     <div>
                         <h2>Post Deleted ! - Click the view all button above to see all your remaining secret posts.</h2>
                     </div>
                 }
-                
             </div>
         )
     }else{
