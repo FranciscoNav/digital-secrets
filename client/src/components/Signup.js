@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Signup = ({loginUser}) => {
     const [username, setUserName] = useState("")
@@ -40,6 +41,9 @@ const Signup = ({loginUser}) => {
                 <input type="password" id="password_confirm" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
                 <br/>
                 <input className="button" type="submit"/>
+                <Link to={`/`} className='form-title'>
+                    <h3>Back</h3>
+                </Link>
             </form>
         </div>
     )
