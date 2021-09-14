@@ -36,7 +36,7 @@ const EditForm = ({editPost, post, setEditFormFlag}) => {
                 <br/>
                 <label>Date</label>
                 <br/>
-                <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
+                <input type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
                 <br/>
                 <input className="button" type="submit"/>
                 <button className="button" onClick={() => setEditFormFlag(false)}>Back</button>

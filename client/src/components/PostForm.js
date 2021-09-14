@@ -30,7 +30,7 @@ const PostForm = ({addPost, setPostFormFlag}) => {
                 <br/>
                 <label>Date</label>
                 <br/>
-                <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
+                <input type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
                 <br/>
                 <br/>
                 <input className="button" type="submit"/>
