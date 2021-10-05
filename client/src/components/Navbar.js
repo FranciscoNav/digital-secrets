@@ -6,12 +6,10 @@ const Navbar = (props) => {
     if (props.loggedIn){
         return (
             <div>
-                <h1>Hello {props.user.username}</h1>
-                <button className="logout-button" onClick={props.logoutUser}>Logout</button>
                 <br/>
-                <Link to="/posts">
-                    <button className="button">View all Secret Posts</button>
-                </Link>
+                <NavLink to='/' className="nav-link"> Home </NavLink>
+                <NavLink to='/posts' className="nav-link"> View all Secret Posts </NavLink>
+                <button className="logout-button" onClick={props.logoutUser}>Logout</button>
                 <hr/>
             </div>
         )

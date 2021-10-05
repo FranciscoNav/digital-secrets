@@ -58,7 +58,7 @@ function App() {
     <div className="App">
       <Navbar user={user} loggedIn={loggedIn} logoutUser={logoutUser} loginError={loginError}/>
       <Switch>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" render={routerProps => <Home {...routerProps} loggedIn={loggedIn} user={user}/>}/>
         <Route exact path="/signup" render={routerProps => <Signup {...routerProps} loginUser={LoginUser}/>}/>
         <Route exact path="/login" render={routerProps => <Login {...routerProps} loginUser={LoginUser} />}/>
         <Route exact path="/posts" render={routerProps => <PostList {...routerProps} user={user} loggedIn={loggedIn}/>}/>
