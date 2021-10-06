@@ -41,7 +41,7 @@ body{
 .logout-button {
   float: right;
   position: relative;
-  padding: px 5px;
+  padding: 1px 5px;
   background:#c22a37;
   color: whitesmoke;
   border-radius: 20px;
@@ -123,4 +123,25 @@ body{
 
 .nav-link:hover::before{
   width: 100%;
+}
+
+.nav{
+  display: inline-flex;
+  position: relative;
+  float: right;
+}
+
+.login-button {
+  padding: 1px 5px;
+  background:#c22a37;
+  color: whitesmoke;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-button:hover {
+  background-color: whitesmoke;
+  border: #000000 solid 1px;
+  color: #c22a37;
 }
