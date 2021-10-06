@@ -22,8 +22,8 @@ const EditForm = ({editPost, post, setEditFormFlag}) => {
 
     return (
         <div>
-            <form className="sign-up" onSubmit={handleSubmit}>
-                <h3 className='form-title'>This form allows you to edit the post above.</h3>
+            <form className="post-form" onSubmit={handleSubmit}>
+                <h3 className='form-title'>Edit the post above.</h3>
                 <label>Title</label>
                 <br/>
                 <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)}></input>

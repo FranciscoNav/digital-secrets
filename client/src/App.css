@@ -39,15 +39,14 @@ body{
 }
 
 .logout-button {
+  float: right;
   position: relative;
-  background-color: #c22a37;
-  border-radius: 5px;
-  height: 2rem;
-  width: max-content;
+  padding: px 5px;
+  background:#c22a37;
   color: whitesmoke;
-  font-size: 18px;
-  justify-self: center;
-  margin: 3px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .logout-button:hover {
@@ -84,9 +83,44 @@ body{
 
 .content{
   font-family: "Permanent Marker", cursive;
-  /* font-size: 14px; */
 }
 
 .form-title{
   font-family: "Permanent Marker", cursive;
+}
+
+/* Nav bar styling */
+
+.nav-container{
+  background-color: #924ad6;
+}
+
+.nav-link{
+  display: inline-block;
+  margin-left: 70px;
+  margin-right: 10px;
+  padding-top: 5px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-link:hover{
+  color:black;
+}
+
+.nav-link::before{
+  content: '';
+  display: block;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  top:0;
+  width:0%;
+  transition: all ease-in-out 250ms;
+}
+
+.nav-link:hover::before{
+  width: 100%;
 }
